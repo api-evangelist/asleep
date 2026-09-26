@@ -1,23 +1,61 @@
 aid: asleep
+
 name: Asleep
-description: 'Asleep is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Asleep is a company identified in the API Evangelist harvest backlog. It appears to be a consumer sleep‑related brand offering products such as eyemasks and pillows via an e‑commerce site. No public API documentation or developer portal could be located despite searching the company’s website and related domains. The profile therefore reflects a lack of discoverable API resources.'
+
 url: https://raw.githubusercontent.com/api-evangelist/asleep/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-26 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-26'
+
 modified: '2026-09-26'
+
 tags:
 - Company
-apis: []
+- Sleep
+- E-commerce
+- Consumer Goods
+- Retail
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: LLMsTxt
+  url: llms/asleep-llms.txt
+- type: WellKnown
+  url: well-known/asleep-well-known.yml
+- type: Hosts
+  url: hosts/asleep-hosts.yml
+- type: Vendors
+  url: vendors/asleep-vendors.yml
+- type: TermsOfService
+  url: https://asleepcompany.com/policies/terms-of-service
+- type: PrivacyPolicy
+  url: https://asleepcompany.com/policies/privacy-policy
+- type: Newsroom
+  url: https://asleepcompany.com/blogs/news
+- type: DomainSecurity
+  url: security/asleep-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/asleep
+  url: https://asleepcompany.com
+
+apis: []
+x-enrichment:
+  date: '2026-09-26'
+  status: enriched
+  artifacts_added: 9
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
